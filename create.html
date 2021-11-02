@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>施設追加処理 | いわてに泊まって巡って、癒し旅キャンペーン</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+</head>
+<body>
+  <main>
+    <div class="container">
+      <h1 class="text-center">いわてに泊まって巡って、癒し旅キャンペーン</h1>
+      <div class="py-5 text-center">
+        <h2 class="text-center border p-3 d-inline-block">施設追加処理</h2>
+      </div>
+      <div class="mt-5">
+        <div class="row justify-content-center">
+          <div class="col-4 text-center">
+            <h2>宿泊施設追加メニュー</h2>
+            <div class="py-5 border">
+              <form action="php/create.php" method="post" enctype="multipart/form-data">
+                <dl class="mb-5">
+                  <dt><h3>前回のhtml</h3></dt>
+                  <dd><input type="file" name="stay_in_html"></dd>
+                </dl>
+                <dl class="mb-5">
+                  <dt><h3>今回追加のcsv</h3></dt>
+                  <dd><input type="file" name="stay_in_csv"></dd>
+                </dl>
+                <dl class="mb-5">
+                  <dt><h3>宿泊施設を追加</h3></dt>
+                  <dd><input type="submit" name="stay_submit"></dd>
+                </dl>
+              </form>
+            </div>
+            <!-- <button class="rounded w-100 py-3" type="button" onclick="list_create()">宿泊施設追加</button> -->
+            <!-- <a class="button rounded w-100 py-3" href="">宿泊施設追加</a> -->
+          </div>
+          <div class="col-4 text-center">
+            <h2>観光施設追加メニュー</h2>
+            <div class="py-5 border">
+              <form action="php/create.php" method="post" enctype="multipart/form-data">
+                <dl class="mb-5">
+                  <dt><h3>前回のhtml</h3></dt>
+                  <dd><input type="file" name="sightseeing_in_html"></dd>
+                </dl>
+                <dl class="mb-5">
+                  <dt><h3>今回追加のcsv</h3></dt>
+                  <dd><input type="file" name="sightseeing_in_csv"></dd>
+                </dl>
+                <dl class="mb-5">
+                  <dt><h3>観光施設を追加</h3></dt>
+                  <dd><input type="submit" name="sightseeing_submit"></dd>
+                </dl>
+              </form>
+            </div>
+            <!-- <button class="rounded w-100 py-3" type="button" onclick="php/list_sightseeing_create()">観光施設追加</button> -->
+            <!-- <a class="button rounded w-100 py-3" href="php/list_sightseeing_create.php">観光施設追加</a> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

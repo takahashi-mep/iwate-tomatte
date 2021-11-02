@@ -1,0 +1,290 @@
+.inner {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0;
+  }
+  
+  .flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  /* body
+  --------------------------------*/
+  
+  .header-sec {
+    height: 126px;
+    padding: 0 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+img.header-logo {
+    height: 42px;
+}
+.header-logoheader-sec h1{
+    line-height: 1;
+    font-size: 0;
+}
+
+
+
+  .header-ul {
+    list-style: none;
+    position: relative;
+    display: flex;
+  }
+  
+  .header-ul li {
+    /* font-size: 1.6rem; */
+    margin-right: 45px;
+  }
+  
+  .header-ul li a {
+    /* display: block; */
+    color: #AC2808;
+    font-weight: bold;
+    padding-bottom: 3px;
+    position: relative;
+    display: inline-block;
+    transition: .3s;
+    padding: .6rem 0;
+  }
+
+  
+  /* .header-ul li a:hover {
+    color: #999;
+    border-bottom: 1px solid #ccc;
+    transition: 0s;
+  } */
+  
+  .header-ul li a:hover{
+      color: #E94822;
+  }
+.header-ul li a::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: '';
+    width: 0;
+    height: 3px;
+    background-color: #AC2808;
+    transition: .3s;
+  }
+.header-ul li a:hover::after {
+    width: 100%;
+}
+
+
+
+  .header-ul li:last-child {
+    margin-right: 0px;
+  }
+  
+  .photo-sec {
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+  
+  .photo-box {
+    width: 47.5%;
+    margin-top: 5%;
+  }
+  
+  .photo-box img {
+    width: 100%;
+    margin-bottom: 3.5%;
+  }
+  
+  /* ハンバーガーメニュー　*/
+  .nav-ham {
+    display: none;
+    position: absolute;
+    top: 2.2rem;
+    right: 5.2%;
+    width: 40px;
+    height: 16px;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    z-index: 100;
+  }
+  
+  .nav-ham span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #e94820;
+    position: absolute;
+    transition: transform 0.5s, opacity 0.5s, width 0.3s;
+  }
+  
+  .nav-ham span:nth-child(1) {
+    top: 0;
+  }
+  
+  .nav-ham span:nth-child(2) {
+    top: 0;
+    bottom: 0;
+    margin: auto;
+  }
+  
+  .nav-ham span:nth-child(3) {
+    bottom: 0;
+  }
+  
+  .sp-nav-layout {
+    position: fixed;
+    background: #e94820;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: 0.5s ease-in-out;
+    z-index: 50;
+  }
+  
+  .sp-nav-layout ul {
+    text-align: center;
+    /* margin-top: 66%; */
+    margin-top: 70%!important;
+  }
+  
+  
+  .sp-nav-layout ul li {
+    position: relative;
+    margin-bottom: 70px;
+    transform: translateX(-200px);
+    transition: transform 1.3s ease;
+  }
+  
+  .sp-nav-layout ul li:nth-child(2) {
+    transition-delay: 0.15s;
+  }
+  
+  .sp-nav-layout ul li:nth-child(3) {
+    transition-delay: 0.3s;
+  }
+  
+  .sp-nav-layout ul li:nth-child(4) {
+    transition-delay: 0.45s;
+  }
+  
+  .sp-nav-layout ul li a {
+    font-size: 18px;
+    color: #fff;
+    font-weight: 600;
+  }
+  .sp-nav-layout ul li a:hover {
+    color: #818181;
+  }
+  
+  @media only screen and (max-width: 767px) {
+  
+    /* body
+  --------------------------------*/
+    .inner {
+      position: relative;
+      width: calc(100% - 40px);
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0;
+    }
+    .header-sec {
+      /* height: 55px; */
+      height: 85px;
+      padding: 0 20px;
+    }
+    /* .header-logo {
+      width: 54px;
+      height: auto;
+    } */
+    .header-ul {
+      display: none;
+    }
+    .photo-box p {
+      font-size: 1.6rem;
+    }
+    .text-sec p {
+      font-size: 1.6rem;
+      line-height: 1.9;
+    }
+    /*sp nav*/
+    .nav-ham {
+      display: block;
+      position: absolute;
+      top: 34px;
+      right: 20px;
+      width: 20px;
+      height: 16px;
+      cursor: pointer;
+      z-index: 100;
+    }
+    .open .nav-ham {
+      position: fixed;
+    }
+    .open .nav-ham span {
+      background-color: #fff;
+    }
+    .open .nav-ham span:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+    }
+    .open .nav-ham span:nth-child(2) {
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      width: 0px;
+      opacity: 0;
+    }
+    .open .nav-ham span:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
+    }
+    .open .sp-nav-layout {
+      visibility: visible;
+      opacity: 1;
+      transform: translateX(0);
+    }
+    .open .sp-nav-layout ul li {
+      transform: translateX(0);
+    }
+    .overlay {
+      content: "";
+      display: block;
+      width: 0;
+      height: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 2;
+      opacity: 0;
+      transition: opacity 0.5s;
+    }
+    .photo-sec {
+      margin-top: 3rem;
+      margin-bottom: 3rem;
+    }
+  }
+
+  @media (min-width: 992px) {
+	/* header
+	------------------------------*/
+	img.header-logo{
+		height: 57px;
+	}
+}
+
+@media (max-width: 350px) {
+	img.header-logo{
+		height: 32px;
+	}
+}
